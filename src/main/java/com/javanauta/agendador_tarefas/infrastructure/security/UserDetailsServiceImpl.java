@@ -37,7 +37,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         UsuarioDTO usuarioDTO = usuarioClient.buscaUsuarioPorEmail(email, token);
 
         return User.withUsername(usuarioDTO.getEmail())
-                .password(usuarioDTO.getSenha())
+                .password(usuarioDTO.getSenha() != null ? usuarioDTO.getSenha() : "{noop}")
                 .authorities("ROLE_USER")
                 .build();
     }

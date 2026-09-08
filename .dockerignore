@@ -1,0 +1,10 @@
+.git
+.github
+.gradle
+build
+.idea
+.vscode
+*.iml
+HELP.md
+**/*.md
+!gradle/wrapper/gradle-wrapper.jar
